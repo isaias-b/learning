@@ -24,7 +24,7 @@ class SimpleScene extends JPanel with Scene {
   private var point = new Point2D.Double(0, 0)
   private var t = 0.0d
   private var values: List[Double] = List.empty
-  private val s1 = Series(t => (t * 20).frac.signum * 0.5 + 0.5)
+  private val s1 = Series(t => if (((t * 20).frac - 0.5).signum > 0) 1 else 0)
   private val s2 = Series(t => t)
   private var nSeries = 0
 
