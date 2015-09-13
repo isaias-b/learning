@@ -21,46 +21,27 @@ import java.awt.geom.Point2D
 import javax.swing.JPanel
 
 class SimpleScene extends JPanel with Scene {
-  private var point = new Point2D.Double(0, 0)
   private var t = 0.0d
-  private var values: List[Double] = List.empty
-  private val s1 = Series(t => if (((t * 20).frac - 0.5).signum > 0) 1 else 0)
-  private val s2 = Series(t => t)
-  private var nSeries = 0
 
-  case class Series(f: Double => Double) {
-    var values: List[Double] = List.empty
-    val nr = nSeries
-    nSeries += 1
-
-    def put(t: Double) = {
-      values :+= f(t)
-      if (values.length > w) values = values.tail
-    }
-    def paintComponent(g: Graphics) = for (d <- values.zipWithIndex) {
-      val x: Int = d._2
-      val y: Int = 10 + nr * 50 + (d._1 * 50).toInt
-      g.drawLine(x, y, x, y)
-    }
-  }
   setDoubleBuffered(true)
 
-  val tx: Double => Double = Math.sin
-  val ty: Double => Double = Math.cos
-  val sx: Double => Double = t => t * cx
-  val sy: Double => Double = t => t * cy
+  val tx: F = sin(1)
+  val ty: F = cos(1)
+  val sx: F = t => t * cx
+  val sy: F = t => t * cy
   val pr: Double => Point2D.Double = r => new Point2D.Double(px(r), py(r))
 
-  val px: Double => Double = t => sx(tx(t))
-  val py: Double => Double = t => sy(ty(t))
+  val px: F = t => sx(tx(t))
+  val py: F = t => sy(ty(t))
 
-  val rad: Double => Double = t => t * 2 * Math.PI
+  private val series = Series.define(List(
+    ContinuousSeries(square(200)).deltaEventsWith((p, c) => p != c),
+    ContinuousSeries(identity).deltaEventsWith((p, c) => p < c)
+  ))
 
   def animate(t: Double) = {
     this.t = t
-    point = pr(rad(t))
-    s1.put(t)
-    s2.put(t)
+    series.foreach(_.put(t, w))
     repaint()
   }
 
@@ -70,14 +51,10 @@ class SimpleScene extends JPanel with Scene {
   def cy = h / 2
 
   override def paintComponent(g: Graphics) = {
+    super.paintComponent(g)
 
-    s1.paintComponent(g)
-    s2.paintComponent(g)
+    series.zipWithIndex.foreach(t => t._1.paintComponent(t._2, g))
 
-    g.drawString("x   = %2.2f".format(point.x), 12, h - 12 * 1)
-    g.drawString("y   = %2.2f".format(point.y), 12, h - 12 * 2)
-    g.drawString("t   = %2.2f".format(t), 12, h - 12 * 3)
-    g.drawString("rad = %2.2f".format(rad(t)), 12, h - 12 * 4)
-    g.drawString("sx  = %2.2f".format(sx(tx(rad(t)))), 12, h - 12 * 5)
+    g.drawString("t   = %2.3f".format(t), 12, h - 12 * 0 - 5)
   }
 }

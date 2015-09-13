@@ -17,22 +17,32 @@
 package org.bartelborth.commons
 
 class Animator {
-  private val FPS = 80
-  private val FRAME_LENGTH = 1000 / FPS
+  private val TARGET_FPS = 125
+  private val FRAME_LENGTH = 1000000000 / TARGET_FPS
 
   private var scenes = List.empty[Scene]
-  var time = 0.0;
+  private var time = 0.0;
   private var step = 0.01;
+  private var stats = Statistics(scala.collection.immutable.Queue.empty)
+
+  updateStats(FRAME_LENGTH)
+
+  case class Statistics(deltas: scala.collection.immutable.Queue[Long]) {
+    val avg = deltas.sum.toDouble / Math.max(1, deltas.length).toDouble
+    def next(delta: Long) = Statistics(deltas.enqueueFinite(delta, TARGET_FPS))
+  }
+
+  def avgFrameLength = stats.avg
+  def avgFps = 1000000000d / avgFrameLength
 
   def update = {
-    //    println(s"update $time")
     updateTime
     updateScenes(time)
   }
 
-  //  private def frac(d: Double): Double = d - d.toInt
   private def updateTime = time = (time + step).frac
   private def updateScenes(t: Double) = scenes.foreach(_.animate(t))
+  private def updateStats(frame: Long) = stats = stats.next(frame)
 
   private var running = false
 
@@ -49,8 +59,12 @@ class Animator {
             while (!stopped) {
               if (paused) Thread.sleep(333)
               else {
-                update
-                Thread.sleep(FRAME_LENGTH)
+                val work = timingOf(update).delta
+                val rest: Long = Math.max(0, FRAME_LENGTH - work)
+                val millis = rest / 1000000
+                val nanos = rest % 1000000
+                val wait = timingOf(Thread.sleep(millis, nanos.toInt)).delta
+                updateStats(work + wait)
               }
             }
           } finally {
@@ -60,6 +74,7 @@ class Animator {
       }).start
     }
   }
+
   //                 def sleep(millis: Long) = {
   //          import scala.compat.Platform._
   //          var ts = currentTime
@@ -78,10 +93,11 @@ class Animator {
   //  }
   def pause = { paused = !paused }
   def stop = { stopped = true }
-  def addScene(s: Scene) = {
+  def addScene(s: Scene): Unit = {
     scenes :+= s
   }
-  def velocity_=(v: Double) = {
+
+  def velocity_=(v: Double): Unit = {
     step = Math.pow(v, 2) * 0.25
   }
 }
