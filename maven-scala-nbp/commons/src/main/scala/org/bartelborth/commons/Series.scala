@@ -21,17 +21,14 @@ import java.awt.Graphics
 trait Series[T] {
   val f: Double => T
   var values: List[T] = List.empty
-  val MARGIN = 10
-  val HEIGHT = 40
 
   def put(t: Double, w: Int) = {
     val ft = f(t)
     values :+= ft
-    if (values.length > w) values = values.tail
+    while (values.length > w && w > 0) values = values.tail
   }
-  def off(implicit nr: Int) = MARGIN + nr * (HEIGHT + MARGIN)
 
-  def paintComponent(implicit nr: Int, g: Graphics): Unit
+  def paintComponent(h: Double, g: Graphics): Unit
 
   def current = values.lastOption
   def previous = values.dropRight(1).lastOption
@@ -46,17 +43,17 @@ object Series {
 }
 
 case class ContinuousSeries(f: F) extends Series[Double] {
-  def paintComponent(implicit nr: Int, g: Graphics) =
+  def paintComponent(h: Double, g: Graphics) =
     for ((y, x) <- values.zipWithIndex) {
-      val sy: Int = off + (y * HEIGHT).toInt
+      val sy: Int = (y * h).toInt
       g.drawLine(x, sy, x, sy)
     }
 }
 
 case class EventSeries(f: Double => Boolean) extends Series[Boolean] {
-  def paintComponent(implicit nr: Int, g: Graphics) = {
+  def paintComponent(h: Double, g: Graphics) =
     for ((y, x) <- values.zipWithIndex.filter(_._1)) {
-      g.drawLine(x, off, x, off + HEIGHT)
+      g.drawLine(x, 0, x, h.toInt)
     }
-  }
+
 }

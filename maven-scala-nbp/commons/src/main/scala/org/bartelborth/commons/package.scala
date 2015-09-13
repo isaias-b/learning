@@ -30,6 +30,7 @@ package object commons {
   def rad(l: Double): F = t => t * 2 * Math.PI * l
   def sin(l: Double): F = scale0p1 compose mathSin compose rad(l)
   def cos(l: Double): F = scale0p1 compose mathCos compose rad(l)
+  def translate(l: Double): F = t => (t + l).frac
 
   implicit class RichDouble(d: Double) {
     def frac: Double = d - d.toInt
@@ -51,7 +52,6 @@ package object commons {
     def enqueueFinite[B >: A](elem: B, maxSize: Int): Queue[B] = {
       var ret = q.enqueue(elem)
       while (ret.size > maxSize) { ret = ret.dequeue._2 }
-      //      println(ret)
       ret
     }
   }
