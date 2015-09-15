@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
-package org.bartelborth.commons
+package org.bartelborth.commons.paintables
 
 import java.awt.Graphics
+import org.bartelborth.commons._
 
 trait Series[T] {
   val f: Double => T

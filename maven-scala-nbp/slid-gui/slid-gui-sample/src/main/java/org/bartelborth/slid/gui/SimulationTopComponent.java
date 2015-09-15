@@ -5,8 +5,8 @@
  */
 package org.bartelborth.slid.gui;
 
-import org.bartelborth.commons.Animator;
-import org.bartelborth.commons.Scene;
+import org.bartelborth.commons.animations.Animator;
+import org.bartelborth.commons.animations.Scene;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
@@ -57,7 +57,7 @@ public final class SimulationTopComponent extends TopComponent implements Scene 
     stop = new javax.swing.JButton();
     pause = new javax.swing.JButton();
     velocity = new javax.swing.JSlider();
-    scene = new org.bartelborth.commons.SimpleScene();
+    scene = new org.bartelborth.commons.animations.SimpleScene();
     position = new javax.swing.JProgressBar();
 
     setLayout(new java.awt.BorderLayout());
@@ -135,7 +135,7 @@ public final class SimulationTopComponent extends TopComponent implements Scene 
   private javax.swing.JPanel buttonPanel;
   private javax.swing.JButton pause;
   private javax.swing.JProgressBar position;
-  private org.bartelborth.commons.SimpleScene scene;
+  private org.bartelborth.commons.animations.SimpleScene scene;
   private javax.swing.JButton start;
   private javax.swing.JButton stop;
   private javax.swing.JSlider velocity;

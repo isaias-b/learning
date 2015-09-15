@@ -14,7 +14,9 @@
  * limitations under the License.
  */
 
-package org.bartelborth.commons
+package org.bartelborth.commons.animations
+
+import org.bartelborth.commons._
 
 class Animator {
   private val TARGET_FPS = 125

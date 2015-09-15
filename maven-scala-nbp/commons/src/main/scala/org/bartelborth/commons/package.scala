@@ -17,6 +17,8 @@
 
 package org.bartelborth
 
+import org.bartelborth.commons._
+
 package object commons {
   type F = Double => Double
   val identity: F = t => t
@@ -56,7 +58,7 @@ package object commons {
     }
   }
   implicit def queue2finitequeue[A](q: Queue[A]) = new FiniteQueue[A](q)
-  implicit def series2list[T](s: Series[T]) = List(s)
+  //  implicit def series2list[T](s: Series[T]) = List(s)
 
   def lift2edt(f: => Unit): Unit = {
     import javax.swing.SwingUtilities

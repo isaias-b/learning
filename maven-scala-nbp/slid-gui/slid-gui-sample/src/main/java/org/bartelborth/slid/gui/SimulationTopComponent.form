@@ -67,7 +67,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="org.bartelborth.commons.SimpleScene" name="scene">
+    <Container class="org.bartelborth.commons.animations.SimpleScene" name="scene">
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
           <ResourceString bundle="org/bartelborth/slid/gui/Bundle.properties" key="SimulationTopComponent.scene.AccessibleContext.accessibleName" replaceFormat="org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)"/>

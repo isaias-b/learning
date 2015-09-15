@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.bartelborth.commons
+package org.bartelborth.commons.animations
 
 trait Scene {
   def animate(t: Double): Unit

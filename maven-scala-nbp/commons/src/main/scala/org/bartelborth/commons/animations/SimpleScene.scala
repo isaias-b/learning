@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.bartelborth.commons
+package org.bartelborth.commons.animations
 
 import java.awt.Color
 import java.awt.Graphics
@@ -26,6 +26,9 @@ import java.awt.geom.Line2D
 import java.awt.geom.Point2D
 import java.awt.image.BufferedImage
 import javax.swing.JComponent
+
+import org.bartelborth.commons._
+import org.bartelborth.commons.paintables._
 
 class SimpleScene extends JComponent with Scene {
   private var t = 0.0d
