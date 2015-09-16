@@ -21,6 +21,7 @@ import org.bartelborth.commons._
 
 package object commons {
   type F = Double => Double
+  case class Point(x: Double, y: Double)
   val identity: F = t => t
   val mathSin: F = Math.sin
   val mathCos: F = Math.cos

@@ -51,7 +51,6 @@ class SimpleScene extends JComponent with Scene {
   private var buffer = resizer.createImage
 
   setDoubleBuffered(true)
-  //  setOpaque(true)
   addComponentListener(resizer)
 
   val tx: F = sin(1)
@@ -113,6 +112,10 @@ class SimpleScene extends JComponent with Scene {
 
       g.translate(-50, -50)
 
+      row1(g)
+      row2(g)
+      row3(g)
+
       g.drawString("t   = %2.3f".format(t), 12, h - 12)
 
       g.dispose()
@@ -120,4 +123,22 @@ class SimpleScene extends JComponent with Scene {
       graphics.drawImage(b, MARGIN, MARGIN, w, h, null)
     })
   }
+  val row1 = at(0, 100)(myrow(identity, sin(1), cos(1)))
+  val row2 = at(0, 140)(mywhiteBoard(600, 40)(incrementalA.f))
+  val row3 = at(0, 190)(mywhiteBoard(600, 40)(incrementalB.f))
+  def myrow(fs: F*): P = {
+    val (w, h) = (100, 30)
+    val ps = fs.map(f => mywhiteBoard(w, h)(f))
+    row(10 + w, ps: _*)
+  }
+  def mywhiteBoard(w: Int, h: Int)(f: F): P = g => {
+    whiteBoard(w, h)(at(2, 2)(portrait(w - 4, h - 4)(f)))(g)
+    scanlineV(w, h)(t)(g)
+  }
+
+  def scanlineV(w: Int, h: Int): Double => P = t => g => {
+    val x = (t * w).toInt
+    g.drawLine(x, 0, x, h)
+  }
+
 }
