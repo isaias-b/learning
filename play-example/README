@@ -1,4 +1,90 @@
-This is your new Play application
-=================================
+Within this Play application i am trying to learn several things
+================================================================
 
-This file will be packaged with your application, when using `activator dist`.
+- Using reader monads in combination with guice dependency injection container (this should be configured to use different implementations for production and test, later on)
+- Provide a small set of reliable REST endpoints (two GET requests ATM)
+- Use centralized error and error recovery handling
+- Fetch data from a very simple cassandra database (this should be combined with using Anorm, later on)
+- Use behaviour driven test specifications to test some parts of the application
+
+To execute this, make sure to have a cassandra database installed
+with a keyspace called "mykespace". The keyspace should contain
+the following table.
+
+CREATE TABLE mykeyspace.users (
+    user_id int PRIMARY KEY,
+    fname text,
+    lname text
+);
+
+INSERT INTO users(user_id, fname, lname) VALUES(123, 'Hans', 'Wurst');
+
+With a database setup like described above it should be possible 
+to execute the command "activator test". This should produce the
+following output. (sample from windows)
+
+PATH-TO-PROJECT>activator test
+[info] Loading project definition from PATH-TO-PROJECT\project
+[info] Set current project to play-example (in build file:/PATH-TO-PROJECT/)
+Warning: node.js detection failed, sbt will use the Rhino based Trireme JavaScript engine instead to run JavaScript assets compilation, which in some cases may be orders of magnitude slower than using node.js.
+[info] ApplicationSpec
+[info]
+[info] Application should
+[info]   + send 404 on a bad request
+[info]   + render the index page
+[info]
+[info] Total for specification ApplicationSpec
+[info] Finished in 1 second, 24 ms
+[info] 2 examples, 0 failure, 0 error
+[info]
+[info] UserSpec
+[info]
+[info] Calling GET on the /api/user resource should
+[info]   + send 400 BAD_REQUEST with an invalid id
+[info]   + send 200 OK with a valid id
+[info]   + send 200 OK with a valid but non existent id
+[info] Calling GET on the /api/user/all resource should
+[info]   + send 200 OK
+[info]
+[info] Total for specification UserSpec
+[info] Finished in 335 ms
+[info] 4 examples, 0 failure, 0 error
+[info]
+[info] IntegrationSpec
+[info]
+[info] Application should
+[info]   + work from within a browser
+[info]
+[info] Total for specification IntegrationSpec
+[info] Finished in 746 ms
+[info] 1 example, 0 failure, 0 error
+[info]
+[info] RecoverSpec:
+[info] toSafeInt returns a parser from string to to int, which
+[info] - should turn invalid integer strings into instances of Failure(ClientException)
+[info] - should turn valid integer strings xx into instances of Success[Int](xx)
+[info] toSafeResult
+[info] - should return any given xx result when given a Success(xx)
+[info] - should return a BadRequest(msg) result for any given ClientException(msg)
+[info] - should return a NotImplemented result for org.apache.commons.lang3.NotImplementedException
+[info] - should return a NotImplemented result for scala.NotImplementedError
+[info] - should return an InternalServerError on anything else
+[info] ConnectionUriSpec:
+[info] A Cassandra connection URI object
+[info] - should parse a URI with a single host
+[info] - should parse a URI with additional hosts
+[info] ScalaTest
+[info] Run completed in 4 seconds, 621 milliseconds.
+[info] Total number of tests run: 9
+[info] Suites: completed 2, aborted 0
+[info] Tests: succeeded 9, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[info] Passed: Total 16, Failed 0, Errors 0, Passed 16
+[success] Total time: 5 s, completed 21.12.2015 01:30:41
+
+
+When the tests ran successfully, you can start the application by executing
+the command "activator run". This should instantiate the application to listen
+on "localhost:9000". In case this produces any conflicts on your machine you can
+easily override this parameter using the command "activator \"run 9999\"" to
+spawn a new instance listening on port 9999.
