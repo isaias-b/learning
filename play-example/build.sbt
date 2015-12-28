@@ -10,6 +10,8 @@ routesGenerator := InjectedRoutesGenerator
 
 libraryDependencies ++= Seq(
   jdbc,
+  "com.typesafe.play" %% "anorm" % "2.4.0",
+  "org.postgresql" % "postgresql" % "9.4.1207.jre7",
   cache,
   ws,
   "org.scalaz" %% "scalaz-core" % "7.1.1",
