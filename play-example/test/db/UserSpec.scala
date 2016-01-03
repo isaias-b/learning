@@ -13,9 +13,13 @@ class UserSpec extends PlaySpec with OneBrowserPerSuite with OneServerPerSuite w
   val user = db.User(Some(123), "Hans", "Wurst")
 
   "ANORM: on table users" should {
-    "fetch all shoudl retrieve List(User(123,Hans,Wurst))" in {
+    "fetch all should retrieve List(User(123,Hans,Wurst))" in {
       val userOpt = db.User.fetchAll
       userOpt must be(List(user))
+    }
+    "fetch with valid id should retrieve User(123,Hans,Wurst)" in {
+      val userOpt = db.User.fetch(123)
+      userOpt must be(Some(user))
     }
   }
 }

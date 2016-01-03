@@ -15,7 +15,12 @@ object User {
   } yield User(id, fname, lname)
 
   def fetchAll: List[User] = DB.withConnection { implicit c =>
-    val r = SQL"""select * from users;""".as(parser.*)
-    r
+    SQL"""select * from users;"""
+    .as(parser.*)
+  }
+
+  def fetch(id: Int): Option[User] = DB.withConnection { implicit c =>
+    SQL"""select * from users where users.id=$id;"""
+    .as(parser.singleOpt)
   }
 }
