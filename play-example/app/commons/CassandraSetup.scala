@@ -25,7 +25,14 @@ class CassandraSetup(uri: ConnectionUri) {
 
   def asFunc[T](v: => T): Unit => T = _ => v
   def createCluster = asFunc(uri.createCluster(QueryOptions.DEFAULT_CONSISTENCY_LEVEL))
-  def setupCluster = createCluster
+  def applyMigrations: Cluster => Cluster = cluster => {
+    cluster.run { session =>
+      Pillar.initialize(session, uri.keyspace, 1)
+      Pillar.migrate(session)
+    }
+    cluster
+  }
+  def setupCluster = createCluster andThen applyMigrations
   val cluster: Cluster = setupCluster(())
 
 }
