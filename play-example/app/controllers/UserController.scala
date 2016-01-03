@@ -12,6 +12,7 @@ import javax.inject.Inject
 import scalaz._
 
 class UserController @Inject() (repo: repositories.UserRepository) extends Controller with reader.UsersReader {
+
   def get(idStr: String) = Action.async {
     Future {
       val result: Try[Result] = for {
@@ -21,6 +22,7 @@ class UserController @Inject() (repo: repositories.UserRepository) extends Contr
       result.toSafeResult
     }
   }
+
   def getAll = Action.async {
     Future {
       val result: Try[Result] = for {
@@ -29,6 +31,7 @@ class UserController @Inject() (repo: repositories.UserRepository) extends Contr
       result.toSafeResult
     }
   }
+  
   private def run[A](reader: Reader[repositories.UserRepository, A]): A = reader(repo)
 
 }
