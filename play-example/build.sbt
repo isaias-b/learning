@@ -17,6 +17,7 @@ libraryDependencies ++= Seq(
   "org.scalaz" %% "scalaz-core" % "7.1.1",
   "com.datastax.cassandra" % "cassandra-driver-core" % "2.1.1",
   "org.apache-extras.cassandra-jdbc" % "cassandra-jdbc" % "1.2.1",
+  "com.chrisomeara" % "pillar_2.11" % "2.0.1",
   
   "org.scalatestplus" %% "play" % "1.4.0-M3" % "test"
 )
