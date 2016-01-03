@@ -16,7 +16,7 @@ import java.util.Date
 object Pillar {
 
   private val registry = Registry(loadedMigrations)
-  private val migrator = Migrator(registry, new PrintStreamReporter(Console.out))
+  private val migrator = Migrator(registry)
 
   def migrationsDir = "migrations/"
   def migrationNames = JarUtils.getResourceListing(getClass, migrationsDir).toList.filter(_.nonEmpty)
