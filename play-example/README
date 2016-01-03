@@ -6,11 +6,18 @@ Within this Play application i am trying to learn and demonstrate several things
 - Use centralized error and error recovery handling
 - Fetch data from a very simple cassandra database (this should be combined with Anorm, later on)
 - Use behaviour driven test specifications to test some parts of the application
+- Reshape project into a multi module sbt project
 
 To execute this, make sure to have a cassandra database installed
-with a keyspace called "mykespace". Anything else is generated on first
-execution by the given database migrations. The keyspace will contain
-the following changes.
+with a keyspace called "mykespace". To create this appropriately
+you can use the following line of code:
+
+CREATE KEYSPACE mykeyspace WITH replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
+
+Anything else is generated during first execution of the application
+when the database is accessed, by the given database migrations. The
+migrations are located at conf/migrations ATM. 
+Afterwards the keyspace will contain the following changes.
 
 CREATE TABLE mykeyspace.users (
     user_id int PRIMARY KEY,
