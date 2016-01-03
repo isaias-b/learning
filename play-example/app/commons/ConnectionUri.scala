@@ -1,6 +1,9 @@
 package commons
 
 import java.net.URI
+import com.datastax.driver.core.ConsistencyLevel
+import com.datastax.driver.core.Cluster
+import com.datastax.driver.core.QueryOptions
 
 case class ConnectionUri(connectionString: String) {
 
@@ -21,4 +24,13 @@ case class ConnectionUri(connectionString: String) {
   val port = uri.getPort
   val keyspace = uri.getPath.substring(1)
 
+  def createCluster(defaultConsistencyLevel: ConsistencyLevel): Cluster = {
+    new Cluster.Builder().
+      addContactPoints(hosts.toArray: _*).
+      withPort(port).
+      withQueryOptions(
+        new QueryOptions().
+          setConsistencyLevel(defaultConsistencyLevel)).
+        build
+  }
 }

@@ -3,36 +3,29 @@ package commons
 import com.datastax.driver.core._
 import scala.util._
 
-object CassandraSetup {
-  val uri = ConnectionUri("cassandra://localhost:9042/mykeyspace")
-  val cluster = createCluster(uri)
-  def newSession = cluster.connectWithKeyspace(uri.keyspace)
+object CassandraSetup extends CassandraSetup(ConnectionUri("cassandra://localhost:9042/mykeyspace")) {
+  def run[T]: Block[T] => Try[T] = cluster.run
+}
 
-  def createCluster(
-    uri: ConnectionUri,
-    defaultConsistencyLevel: ConsistencyLevel = QueryOptions.DEFAULT_CONSISTENCY_LEVEL) = {
-    new Cluster.Builder().
-      addContactPoints(uri.hosts.toArray: _*).
-      withPort(uri.port).
-      withQueryOptions(
-        new QueryOptions().
-          setConsistencyLevel(defaultConsistencyLevel)).
-        build
-  }
-
+class CassandraSetup(uri: ConnectionUri) {
   implicit class RichCluster(cluster: Cluster) {
-    def connectWithKeyspace(keyspace: String) = {
+    def connectWithKeyspace = {
       val session = cluster.connect
-      session.execute(s"USE ${keyspace}")
+      session.execute(s"USE ${uri.keyspace}")
       session
+    }
+    def newSession = cluster.connectWithKeyspace
+    def run[T]: Block[T] => Try[T] = block => {
+      val session = Try { newSession }
+      val result = session.map(block)
+      session.map(_.close)
+      session.flatMap(_ => result)
     }
   }
 
-  def run[T]: Block[T] => Try[T] = block => {
-    val session = Try { newSession }
-    val result = session.map(block)
-    session.map(_.close)
-    session.flatMap(_ => result)
-  }
-  
+  def asFunc[T](v: => T): Unit => T = _ => v
+  def createCluster = asFunc(uri.createCluster(QueryOptions.DEFAULT_CONSISTENCY_LEVEL))
+  def setupCluster = createCluster
+  val cluster: Cluster = setupCluster(())
+
 }
