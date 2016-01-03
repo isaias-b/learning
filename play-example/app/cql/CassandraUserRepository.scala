@@ -7,7 +7,7 @@ import scala.util._
 import scala.collection.JavaConversions._
 import com.datastax.driver.core.Row
 
-class UserCql extends repositories.UserRepository {
+class CassandraUserRepository extends repositories.UserRepository {
 
   def fetch(id: Int): Try[Option[Target]] = CassandraSetup.run(session => {
     val cql = """SELECT * FROM users WHERE user_id = ?;"""
