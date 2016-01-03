@@ -1,21 +1,20 @@
 package controller
 
-import org.specs2.mutable._
-import org.specs2.runner._
+import org.scalatestplus.play._
+
+import org.scalatest.junit.JUnitRunner
 import org.junit.runner._
-import play.api.test._
-import play.api.test.Helpers._
 
 @RunWith(classOf[JUnitRunner])
-class IntegrationSpec extends Specification {
+class IntegrationSpec extends PlaySpec with OneBrowserPerSuite with OneServerPerSuite with HtmlUnitFactory {
 
   "Application" should {
 
-    "work from within a browser" in new WithBrowser {
+    "work from within a browser" in {
 
-      browser.goTo("http://localhost:" + port)
+      go to "http://localhost:" + port
 
-      browser.pageSource must contain("Your new application is ready.")
+      pageSource must include ("Your new application is ready.")
     }
   }
 }

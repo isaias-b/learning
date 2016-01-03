@@ -1,10 +1,11 @@
 package commons
 
 import org.scalatest.{ Matchers, FunSpec }
-import org.specs2.runner._
-import org.junit.runner._
 import com.datastax.driver.core._
 
+
+import org.scalatest.junit.JUnitRunner
+import org.junit.runner._
 
 @RunWith(classOf[JUnitRunner])
 class ConnectionUriSpec extends FunSpec with Matchers {

@@ -16,8 +16,9 @@ libraryDependencies ++= Seq(
   ws,
   "org.scalaz" %% "scalaz-core" % "7.1.1",
   "com.datastax.cassandra" % "cassandra-driver-core" % "2.1.1",
-  specs2 % Test,
-  "org.scalatest" % "scalatest_2.11" % "2.2.4" % Test
+  "org.apache-extras.cassandra-jdbc" % "cassandra-jdbc" % "1.2.1",
+  
+  "org.scalatestplus" %% "play" % "1.4.0-M3" % "test"
 )
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
