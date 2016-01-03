@@ -17,32 +17,32 @@ class UserSpec extends PlaySpec with OneBrowserPerSuite with OneServerPerSuite w
 
     "send 400 BAD_REQUEST with an invalid id" in {
       val response = route(FakeRequest(GET, "/api/user/#")).get
-      status(response).must(be(BAD_REQUEST))
+      status(response) must be(BAD_REQUEST)
     }
 
-    //    "send 200 OK with a valid id" in {
-    //      val response = route(FakeRequest(GET, "/api/user/123")).get
-    //      status(response) must beEqualTo(OK)
-    //      contentType(response) must beSome.which(_ == "text/plain")
-    //      contentAsString(response) must beEqualTo(Some(user).toString)
-    //    }
-    //
-    //    "send 200 OK with a valid but non existent id" in {
-    //      val response = route(FakeRequest(GET, "/api/user/0")).get
-    //      status(response) must beEqualTo(OK)
-    //      contentType(response) must beSome.which(_ == "text/plain")
-    //      contentAsString(response) must beEqualTo("None")
-    //    }
-    //  }
-    //
-    //  "Calling GET on the /api/user/all resource" should {
-    //
-    //    "send 200 OK" in {
-    //      val response = route(FakeRequest(GET, "/api/user/all")).get
-    //      status(response) must beEqualTo(OK)
-    //      contentType(response) must beSome.which(_ == "text/plain")
-    //      contentAsString(response) must beEqualTo(List(user).toString)
-    //    }
+    "send 200 OK with a valid id" in {
+      val response = route(FakeRequest(GET, "/api/user/123")).get
+      status(response) must be(OK)
+      contentType(response).value must be("text/plain")
+      contentAsString(response) must be(Some(user).toString)
+    }
+
+    "send 200 OK with a valid but non existent id" in {
+      val response = route(FakeRequest(GET, "/api/user/0")).get
+      status(response) must be(OK)
+      contentType(response).value must be("text/plain")
+      contentAsString(response) must be("None")
+    }
+  }
+
+  "Calling GET on the /api/user/all resource" should {
+
+    "send 200 OK" in {
+      val response = route(FakeRequest(GET, "/api/user/all")).get
+      status(response) must be(OK)
+      contentType(response).value must be("text/plain")
+      contentAsString(response) must be(List(user).toString)
+    }
   }
 
 }
