@@ -23,4 +23,5 @@ class CassandraUserRepository extends repositories.UserRepository {
     val list: List[Row] = result.all().toList
     list.map(r => Target(r.getInt(0), r.getString(1), r.getString(2)))
   })
+  
 }
