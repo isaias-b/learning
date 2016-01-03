@@ -1,8 +1,7 @@
-package cql
+package respositories.impl
 
 import commons._
 import model.{ User => Target }
-
 import scala.util._
 import scala.collection.JavaConversions._
 import com.datastax.driver.core.Row
