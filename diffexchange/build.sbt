@@ -13,6 +13,7 @@ lazy val testDependencies = Seq (
 
 lazy val common = project.in(file("common"))
   .settings(commonSettings:_*)
+  .settings(libraryDependencies ++= testDependencies)
 
 lazy val app = project.in(file("app"))
   .settings(commonSettings:_*)
