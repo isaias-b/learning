@@ -30,6 +30,7 @@ lazy val app = project.in(file("app"))
   .enablePlugins(PlayScala)
   .settings(commonSettings:_*)
   .settings(libraryDependencies ++= playDependencies)
+  .dependsOn(common)
 
 lazy val main = project.in(file("."))
   .aggregate(common, app)
