@@ -11,9 +11,13 @@ lazy val testDependencies = Seq (
   "org.scalatest" %% "scalatest" % "2.2.0" % "test"
 )
 
+lazy val cassandraDependencies = Seq (
+  "com.datastax.cassandra" % "cassandra-driver-core" % "2.1.1"
+)
+
 lazy val common = project.in(file("common"))
   .settings(commonSettings:_*)
-  .settings(libraryDependencies ++= testDependencies)
+  .settings(libraryDependencies ++= (testDependencies ++ cassandraDependencies))
 
 lazy val app = project.in(file("app"))
   .settings(commonSettings:_*)
