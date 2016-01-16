@@ -7,6 +7,9 @@ val commonSettings = Seq (
   scalacOptions 	:= Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 )
 
+lazy val testDependencies = Seq (
+  "org.scalatest" %% "scalatest" % "2.2.0" % "test"
+)
 
 lazy val common = project.in(file("common"))
   .settings(commonSettings:_*)
