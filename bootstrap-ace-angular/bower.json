@@ -1,0 +1,14 @@
+{
+  "name": "bootstrap-ace-angular",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "3.3.6",
+	"bootswatch-dist": "3.3.0-yeti",
+    "requirejs": "2.1.4",
+    "modernizr": "2.6.2",
+    "jquery": "1.9.1",
+    "d3": "3.3.2",
+    "angular": "1.0.7"
+  },
+  "devDependencies": {}
+}
