@@ -1,0 +1,13 @@
+{
+  "name": "bootstrap-ace-angular",
+  "description": "minimal example combining bootstrap ace and angular",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+	"url": "https://github.com/isaias-b/learning"
+  },
+  "devDependencies": {
+    "bower": "1.7.3"
+  },
+  "license": "MIT"
+}
