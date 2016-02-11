@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "bootstrap": "3.3.6",
-	"bootswatch-dist": "3.3.0-yeti",
+    "bootswatch-dist": "3.3.6-slate",
     "requirejs": "2.1.4",
     "modernizr": "2.6.2",
     "jquery": "1.9.1",
