@@ -4,18 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-
     <title>Theme Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
     <link href="bower_components/bootswatch-dist/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="theme.css" rel="stylesheet">
+
+    <script src="bower_components/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 
 <style type="text/css" media="screen">
   .editor-block {
@@ -23,8 +19,17 @@
 	  width: 80%;
     padding: 2px;
   }
+/*
+  .ace_active-line {
+    background: rgba(51, 52, 53, 0.5) none repeat scroll 0 0;
+  }
+  .ace-merbivore-soft .ace_gutter {
+    background: transparent none repeat scroll 0 0;
+  }
+*/
   .ace_editor {
 	  height: 200px;
+    font-size: 16px;
   }
   .scrollmargin {
     height: 80px;
@@ -111,7 +116,6 @@
     <script src="bower_components/bootstrap/assets/js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bower_components/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="bower_components/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
     <script>
         var editor = ace.edit("editor");
         editor.setTheme("ace/theme/merbivore_soft");
