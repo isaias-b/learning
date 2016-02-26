@@ -103,10 +103,7 @@
       </div>
 
       <div class="well">
-        <div ui-ace="{ 
-            theme:'merbivore_soft',
-            mode: 'javascript'
-          }" id="editor-read" ng-model="code" ng-readonly="true"></div>
+        <textarea id="ace_document" ng-model="code"></textarea>
       </div>
 
       <p>
@@ -134,10 +131,8 @@
     <script>
       function setupEditor(name) {
         var editor = ace.edit("editor-" + name);
-//        editor.setTheme("ace/theme/merbivore_soft");
         editor.setAutoScrollEditorIntoView(true);
         editor.setOption("maxLines", 100);
-//        editor.session.setOption("useWorker", false);
       }
       setupEditor("read");
       setupEditor("write");
