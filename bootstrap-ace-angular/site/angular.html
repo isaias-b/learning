@@ -1,0 +1,19 @@
+<html ng-app="nameApp">
+  <head>
+    <meta charset="utf-8" />
+    <title>Angular Example</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>
+      var nameApp = angular.module('nameApp', []);
+      nameApp.controller('NameCtrl', function ($scope) {
+        $scope.firstName = 'John';
+        $scope.lastName = 'Smith';
+      });
+    </script>
+  </head>
+  <body ng-controller="NameCtrl">
+    First Name: <input ng-model="firstName" type="text" /></br>
+    Last Name: <input ng-model="lastName" type="text" /></br>
+    Hello {{firstName}} {{lastName}}
+  </body>
+</html>
