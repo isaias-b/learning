@@ -1,4 +1,4 @@
 node_modules/
-bower_components/
-.*
+site/bower_components/
+.PATH*
 *~
