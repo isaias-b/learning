@@ -1,8 +1,12 @@
+*~
 .project
 .settings
 .classpath
 .cache-main
 .history
+.PATH
 /bin/
 /**/target/
 logs
+programs
+
