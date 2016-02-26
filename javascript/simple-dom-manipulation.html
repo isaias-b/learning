@@ -1,0 +1,19 @@
+<html lang="en">
+    <head>
+        <title>test</title>
+    </head>
+    <body>
+Name:<input id="textInput" type="text" />
+Hello <span id="nameDiv"></span>!
+<script>
+  var textInputElement = document.getElementById('textInput');
+  var nameDivElement = document.getElementById('nameDiv');
+
+  textInputElement.addEventListener('keyup', function() {
+    var text = textInputElement.value;
+    nameDivElement.innerHTML = text;
+  });
+</script>
+
+    </body>
+</html>
