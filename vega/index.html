@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>Vega Scaffold</title>
+    <script src="https://vega.github.io/vega-editor/vendor/d3.min.js"></script>
+    <script src="https://vega.github.io/vega-editor/vendor/d3.geo.projection.min.js"></script>
+    <script src="https://vega.github.io/vega-editor/vendor/topojson.js"></script>
+    <script src="https://vega.github.io/vega-editor/vendor/d3.layout.cloud.js"></script>
+    <script src="https://vega.github.io/vega/vega.min.js"></script>
+  </head>
+  <body>
+<div><h1>airports-params</h1><div id="airports-params"/></div>
+<div><h1>airports</h1><div id="airports"/></div>
+<div><h1>arc</h1><div id="arc"/></div>
+<div><h1>area</h1><div id="area"/></div>
+<div><h1>bar</h1><div id="bar"/></div>
+<div><h1>barley</h1><div id="barley"/></div>
+<div><h1>brush</h1><div id="brush"/></div>
+<div><h1>budget_forecasts</h1><div id="budget_forecasts"/></div>
+<div><h1>choropleth</h1><div id="choropleth"/></div>
+<div><h1>crossfilter</h1><div id="crossfilter"/></div>
+<div><h1>dimpvis</h1><div id="dimpvis"/></div>
+<div><h1>driving</h1><div id="driving"/></div>
+<div><h1>error</h1><div id="error"/></div>
+<div><h1>falkensee</h1><div id="falkensee"/></div>
+<div><h1>force-params</h1><div id="force-params"/></div>
+<div><h1>force</h1><div id="force"/></div>
+<div><h1>force_drag</h1><div id="force_drag"/></div>
+<div><h1>grouped_bar</h1><div id="grouped_bar"/></div>
+<div><h1>heatmap</h1><div id="heatmap"/></div>
+<div><h1>horizon</h1><div id="horizon"/></div>
+<div><h1>image</h1><div id="image"/></div>
+<div><h1>index_chart</h1><div id="index_chart"/></div>
+<div><h1>jobs-params</h1><div id="jobs-params"/></div>
+<div><h1>jobs</h1><div id="jobs"/></div>
+<div><h1>lifelines</h1><div id="lifelines"/></div>
+<div><h1>linking</h1><div id="linking"/></div>
+<div><h1>map-params</h1><div id="map-params"/></div>
+<div><h1>map</h1><div id="map"/></div>
+<div><h1>overview+detail</h1><div id="overview+detail"/></div>
+<div><h1>panzoom_points</h1><div id="panzoom_points"/></div>
+<div><h1>parallel_coords</h1><div id="parallel_coords"/></div>
+<div><h1>playfair</h1><div id="playfair"/></div>
+<div><h1>population</h1><div id="population"/></div>
+<div><h1>reorder_matrix</h1><div id="reorder_matrix"/></div>
+<div><h1>scatter_matrix</h1><div id="scatter_matrix"/></div>
+<div><h1>shiftclick_select</h1><div id="shiftclick_select"/></div>
+<div><h1>stacked_area</h1><div id="stacked_area"/></div>
+<div><h1>stacked_bar</h1><div id="stacked_bar"/></div>
+<div><h1>stocks</h1><div id="stocks"/></div>
+<div><h1>tooltip</h1><div id="tooltip"/></div>
+<div><h1>treemap</h1><div id="treemap"/></div>
+<div><h1>weather</h1><div id="weather"/></div>
+<div><h1>wordcloud</h1><div id="wordcloud"/></div>
+</body>
+<script type="text/javascript">
+// parse a spec and create a visualization view
+function parse(example) {
+  var spec = "node_modules/vega/examples/"+example+".json";
+  vg.parse.spec(spec, function(error, chart) { chart({el:"#"+example}).update(); });
+}
+parse("airports");
+parse("arc");
+parse("area");
+parse("bar");
+parse("barley");
+parse("brush");
+parse("budget_forecasts");
+parse("choropleth");
+parse("crossfilter");
+parse("dimpvis");
+parse("driving");
+parse("error");
+parse("falkensee");
+parse("force-params");
+parse("force");
+parse("force_drag");
+parse("grouped_bar");
+parse("heatmap");
+parse("horizon");
+parse("image");
+parse("index_chart");
+parse("jobs-params");
+parse("jobs");
+parse("lifelines");
+parse("linking");
+parse("map-params");
+parse("map");
+parse("overview+detail");
+parse("panzoom_points");
+parse("parallel_coords");
+parse("playfair");
+parse("population");
+parse("reorder_matrix");
+parse("scatter_matrix");
+parse("shiftclick_select");
+parse("stacked_area");
+parse("stacked_bar");
+parse("stocks");
+parse("tooltip");
+parse("treemap");
+parse("weather");
+parse("wordcloud");
+</script>
+</html>
