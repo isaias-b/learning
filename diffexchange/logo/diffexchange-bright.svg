@@ -10,12 +10,12 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="316.44339"
-   height="65.091042"
-   viewBox="0 0 316.44341 65.09104"
+   width="351.3674"
+   height="65.051567"
+   viewBox="0 0 351.36742 65.051566"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="diffexchange-bright.svg">
   <title
      id="title4939">diff exchange logo (bright)</title>
@@ -23,12 +23,12 @@
      id="defs4">
     <filter
        inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
        id="filter4505"
        x="-0.0027417848"
        width="1.0054836"
        y="-0.0052402769"
-       height="1.0104806">
+       height="1.0104806"
+       color-interpolation-filters="sRGB">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="0.076234131"
@@ -36,12 +36,12 @@
     </filter>
     <filter
        inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
        id="filter4861"
        x="-0.01483371"
        width="1.0296674"
        y="-0.039716311"
-       height="1.0794326">
+       height="1.0794326"
+       color-interpolation-filters="sRGB">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="0.10441009"
@@ -49,12 +49,12 @@
     </filter>
     <filter
        inkscape:collect="always"
-       style="color-interpolation-filters:sRGB"
        id="filter4869"
        x="-0.0014766789"
        width="1.0029534"
        y="-0.0064045885"
-       height="1.0128092">
+       height="1.0128092"
+       color-interpolation-filters="sRGB">
       <feGaussianBlur
          inkscape:collect="always"
          stdDeviation="0.1175647"
@@ -69,8 +69,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="131.26528"
-     inkscape:cy="60.984273"
+     inkscape:cx="131.38215"
+     inkscape:cy="60.830472"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -86,10 +86,10 @@
      inkscape:snap-bbox-edge-midpoints="false"
      inkscape:snap-bbox-midpoints="true"
      showborder="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="1147"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1855"
+     inkscape:window-height="1081"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
      units="px" />
   <metadata
@@ -143,7 +143,7 @@ To use for bright themes</dc:description>
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-26.201975,-111.16901)">
+     transform="translate(-26.085101,-111.05468)">
     <use
        x="0"
        y="0"
@@ -151,31 +151,31 @@ To use for bright themes</dc:description>
        xlink:href="#rect3346"
        transform="matrix(0.99985118,0,0,1.0225189,59.988677,22.975115)"
        id="use3366-3"
-       width="100%"
-       height="100%"
-       style="fill:#7c7c7c;fill-opacity:1;stroke:#282828;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       width="316.44342"
+       height="65.091042"
+       style="fill:#7c7c7c;fill-opacity:1;stroke:#282828;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <use
        x="0"
        y="0"
        inkscape:tiled-clone-of="#rect3346"
        xlink:href="#rect3346"
        id="use3358-2-8"
-       width="100%"
-       height="100%"
+       width="316.44342"
+       height="65.091042"
        transform="matrix(0.99985118,0,0,1.0225189,37.866917,44.398625)"
-       style="fill:#9c0000;fill-opacity:1;stroke:#640a0a;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       style="fill:#9c0000;fill-opacity:1;stroke:#640a0a;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:45px;line-height:125%;font-family:'Verdana Pro';-inkscape-font-specification:'Verdana Pro Bold Condensed';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4869)"
-       x="145.05856"
+       style="font-size:45px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter4869);font-family:Verdana Pro;-inkscape-font-specification:Verdana Pro Bold Condensed"
+       x="155.05856"
        y="161.11218"
        id="text3336"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3338"
-         x="145.05856"
+         x="155.05856"
          y="161.11218"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-size:45px;font-family:'Verdana Pro';-inkscape-font-specification:'Verdana Pro Bold Condensed'">exchange</tspan></text>
+         style="font-size:45px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;font-family:Verdana Pro;-inkscape-font-specification:Verdana Pro Bold Condensed">exchange</tspan></text>
     <rect
        id="rect3346"
        width="16.892889"
@@ -196,9 +196,9 @@ To use for bright themes</dc:description>
        xlink:href="#rect3346"
        transform="matrix(0.99985118,0,0,1.0225189,37.866917,55.110381)"
        id="use3358"
-       width="100%"
-       height="100%"
-       style="fill:#7c7c7c;fill-opacity:1;stroke:#282828;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       width="316.44342"
+       height="65.091042"
+       style="fill:#7c7c7c;fill-opacity:1;stroke:#282828;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <use
        x="0"
        y="0"
@@ -206,9 +206,9 @@ To use for bright themes</dc:description>
        xlink:href="#rect3346"
        transform="matrix(0.99985118,0,0,1.0225189,37.866917,65.822135)"
        id="use3360"
-       width="100%"
-       height="100%"
-       style="fill:#7c7c7c;fill-opacity:1;stroke:#282828;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       width="316.44342"
+       height="65.091042"
+       style="fill:#7c7c7c;fill-opacity:1;stroke:#282828;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <use
        x="0"
        y="0"
@@ -216,9 +216,9 @@ To use for bright themes</dc:description>
        xlink:href="#rect3346"
        transform="matrix(0.99985118,0,0,1.0225189,59.988677,44.398624)"
        id="use3362"
-       width="100%"
-       height="100%"
-       style="fill:#9c0000;fill-opacity:1;stroke:#640a0a;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       width="316.44342"
+       height="65.091042"
+       style="fill:#9c0000;fill-opacity:1;stroke:#640a0a;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <use
        x="0"
        y="0"
@@ -226,9 +226,9 @@ To use for bright themes</dc:description>
        xlink:href="#rect3346"
        transform="matrix(0.99985118,0,0,1.0225189,59.988677,55.110381)"
        id="use3364"
-       style="fill:#fef2f2;fill-opacity:1;stroke:#ffbaba;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       width="100%"
-       height="100%" />
+       style="fill:#fef2f2;fill-opacity:1;stroke:#ffbaba;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       width="316.44342"
+       height="65.091042" />
     <use
        x="0"
        y="0"
@@ -236,9 +236,9 @@ To use for bright themes</dc:description>
        xlink:href="#rect3346"
        transform="matrix(0.99985118,0,0,1.0225189,59.988677,65.822135)"
        id="use3366"
-       width="100%"
-       height="100%"
-       style="fill:#7c7c7c;fill-opacity:1;stroke:#282828;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       width="316.44342"
+       height="65.091042"
+       style="fill:#7c7c7c;fill-opacity:1;stroke:#282828;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <use
        x="0"
        y="0"
@@ -246,9 +246,9 @@ To use for bright themes</dc:description>
        xlink:href="#rect3346"
        transform="matrix(0.99985118,0,0,1.0225189,37.866917,33.686869)"
        id="use3358-2"
-       width="100%"
-       height="100%"
-       style="fill:#7c7c7c;fill-opacity:1;stroke:#282828;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+       width="316.44342"
+       height="65.091042"
+       style="fill:#7c7c7c;fill-opacity:1;stroke:#282828;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     <use
        x="0"
        y="0"
@@ -256,17 +256,17 @@ To use for bright themes</dc:description>
        xlink:href="#rect3346"
        transform="matrix(0.99985118,0,0,1.0225189,59.988677,33.686869)"
        id="use3364-4"
-       style="fill:#fef2f2;fill-opacity:1;stroke:#ffbaba;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       width="100%"
-       height="100%" />
+       style="fill:#fef2f2;fill-opacity:1;stroke:#ffbaba;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       width="316.44342"
+       height="65.091042" />
     <text
        sodipodi:linespacing="125%"
        id="text4241"
        y="161.11218"
        x="76.785713"
-       style="font-style:normal;font-weight:normal;font-size:45px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#9c0000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter4505)"
+       style="font-size:45px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#9c0000;fill-opacity:1;stroke:none;filter:url(#filter4505);font-family:sans-serif"
        xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:600;font-stretch:condensed;font-size:45px;font-family:'Verdana Pro';-inkscape-font-specification:'Verdana Pro Semi-Bold Condensed';fill:#9c0000;fill-opacity:1"
+         style="font-size:45px;font-style:normal;font-variant:normal;font-weight:600;font-stretch:condensed;fill:#9c0000;fill-opacity:1;font-family:Verdana Pro;-inkscape-font-specification:Verdana Pro Semi-Bold Condensed"
          y="161.11218"
          x="76.785713"
          id="tspan4243"
@@ -278,8 +278,8 @@ To use for bright themes</dc:description>
        xlink:href="#rect3346"
        transform="matrix(0.99985118,0,0,1.0225189,37.866917,22.975115)"
        id="use3364-4-6"
-       style="fill:#fef2f2;fill-opacity:1;stroke:#ffbaba;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       width="100%"
-       height="100%" />
+       style="fill:#fef2f2;fill-opacity:1;stroke:#ffbaba;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       width="316.44342"
+       height="65.091042" />
   </g>
 </svg>
