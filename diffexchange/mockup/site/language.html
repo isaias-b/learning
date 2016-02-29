@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+<head>
+  <meta charset="UTF-8">
+  <title>Language: Scala</title>
+  <!-- angular -->
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="../bower_components/angular-touch/angular-touch.min.js"></script>
+  <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  <!-- loadingbar -->
+  <script src="../bower_components/angular-loading-bar/build/loading-bar.js"></script>
+  <link href="../bower_components/angular-loading-bar/build/loading-bar.css" rel="stylesheet"/>
+  <!-- ace -->
+  <script src="../bower_components/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../bower_components/angular-ui-ace/ui-ace.js" type="text/javascript"></script>
+
+  <script src="language.js"></script>
+  <link href="language.css" rel="stylesheet"/>
+
+  <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body ng-app="diffexchange.language" ng-controller="LoadingCtrl">
+
+
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+              aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img
+            style="margin-top: -8px; width: 55%;"
+            src="img/diffexchange-bright.svg"/>
+      </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+             aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+        <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container" ng-controller="LanguageCtrl">
+  <uib-alert type="info" class="alert alert-info animate-hide" role="alert" ng-hide="!isLoading">Loading Site
+    Resources
+  </uib-alert>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+      <div class="page-header">
+        <h1>Scala</h1>
+      </div>
+      <p class="lead">A general purpose multi paradigm programming language, with a focus on functional and object
+        oriented
+        programming.</p>
+    </div>
+    <div class="col-xs-6 col-md-4">
+      <img src="img/Scala.logo.png"/>
+      <table class="table">
+        <tbody>
+        <tr ng-repeat="pair in stats">
+          <td>{{pair.prop}}</td>
+          <td>{{pair.value}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="page-header">
+    <h1>History</h1>
+  </div>
+  <div class="page-header">
+    <h1>Keywords</h1>
+  </div>
+  <ul class="rectangle-list" style="column-count:5; -webkit-column-count:5; -moz-column-count:5;">
+    <li ng-repeat="keyword in keywords"><code>{{keyword}}</code></li>
+  </ul>
+  <div class="page-header">
+    <h1>Hello World</h1>
+  </div>
+  <div ui-ace="{
+            mode: 'scala',
+            showGutter: false,
+            advanced: {
+              highlightActiveLine: false,
+              showPrintMargin: false
+            }
+          }" id="editor-write" ng-model="helloworld" ng-readonly="true"></div>
+
+
+  <!--<div class="btn-group btn-group-justified">-->
+  <!--<a href="#" class="btn btn-primary btn-lg" ng-click="start()">-->
+  <!--<i class="glyphicon glyphicon-play-circle"></i> <span>cfpLoadingBar.</span>start()-->
+  <!--</a>-->
+  <!--<a href="#" class="btn btn-primary btn-lg" ng-click="complete()">-->
+  <!--<i class="glyphicon glyphicon-play-circle"></i> <span>cfpLoadingBar.</span>complete()-->
+  <!--</a>-->
+  <!--</div>-->
+</div> <!-- /container -->
+
+</body>
+</html>
