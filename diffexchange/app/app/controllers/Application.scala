@@ -9,4 +9,8 @@ class Application extends Controller {
     Ok(views.html.index("Your new application is ready."))
   }
 
+  def language(id: String) = Action {
+    Ok(views.html.language(id))
+  }
+
 }

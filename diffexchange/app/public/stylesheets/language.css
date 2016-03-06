@@ -1,0 +1,19 @@
+/* animation */
+.animate-hide {
+  transition: all linear .5s;
+  opacity: 1;
+}
+.animate-hide.ng-hide {
+  line-height: 0;
+  opacity: 0;
+}
+
+/* ace */
+.ace_editor {
+  height: 200px;
+  font-size: 16px;
+}
+.scrollmargin {
+  height: 80px;
+  text-align: center;
+}

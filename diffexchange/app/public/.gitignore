@@ -1,0 +1,5 @@
+*~
+.idea
+.PATH
+bower_components
+node_modules

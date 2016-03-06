@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="351.3674"
+   height="65.051567"
+   viewBox="0 0 351.36742 65.051566"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="diffexchange-dark.svg">
+  <title
+     id="title4939">diff exchange logo (dark)</title>
+  <defs
+     id="defs4">
+    <filter
+       inkscape:collect="always"
+       id="filter4505"
+       x="-0.0027417848"
+       width="1.0054836"
+       y="-0.0052402769"
+       height="1.0104806"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.076234131"
+         id="feGaussianBlur4507" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter4861"
+       x="-0.01483371"
+       width="1.0296674"
+       y="-0.039716311"
+       height="1.0794326"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.10441009"
+         id="feGaussianBlur4863" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter4869"
+       x="-0.0014766789"
+       width="1.0029534"
+       y="-0.0064045885"
+       height="1.0128092"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.1175647"
+         id="feGaussianBlur4871" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#272b30"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.8097803"
+     inkscape:cx="175.6837"
+     inkscape:cy="32.525784"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:showpageshadow="false"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
+     inkscape:object-paths="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="false"
+     inkscape:bbox-nodes="false"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:snap-bbox-midpoints="true"
+     showborder="true"
+     inkscape:window-width="1855"
+     inkscape:window-height="1081"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     units="px" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>diff exchange logo (dark)</dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by/3.0/" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Isaias Bartelborth</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:date>27.02.2016</dc:date>
+        <dc:publisher>
+          <cc:Agent>
+            <dc:title>Isaias Bartelborth</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:language>English</dc:language>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>diff</rdf:li>
+            <rdf:li>exchange</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Logo for the diff exchange network
+To use for dark themes</dc:description>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by/3.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" />
+        <cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-26.085101,-111.05468)">
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3346"
+       xlink:href="#rect3346"
+       transform="matrix(0.99985118,0,0,1.0225189,59.988677,22.975115)"
+       id="use3366-3"
+       width="316.44342"
+       height="65.091042"
+       style="fill:#7c7c7c;fill-opacity:1;stroke:#a7a7a7;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3346"
+       xlink:href="#rect3346"
+       id="use3358-2-8"
+       width="316.44342"
+       height="65.091042"
+       transform="matrix(0.99985118,0,0,1.0225189,37.866917,44.398625)"
+       style="fill:#ff0101;fill-opacity:1;stroke:#e84e4e;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:45px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cdcdcd;fill-opacity:1;stroke:none;filter:url(#filter4869);font-family:Verdana Pro;-inkscape-font-specification:Verdana Pro Bold Condensed"
+       x="155.05856"
+       y="161.11218"
+       id="text3336"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3338"
+         x="155.05856"
+         y="161.11218"
+         style="font-size:45px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:condensed;fill:#cdcdcd;fill-opacity:1;font-family:Verdana Pro;-inkscape-font-specification:Verdana Pro Bold Condensed">exchange</tspan></text>
+    <rect
+       id="rect3346"
+       width="16.892889"
+       height="6.3093529"
+       x="-6.4153495"
+       y="91.392075"
+       inkscape:tile-cx="61.250002"
+       inkscape:tile-cy="230.21934"
+       inkscape:tile-w="35.357143"
+       inkscape:tile-h="10.714286"
+       inkscape:tile-x0="43.57143"
+       inkscape:tile-y0="224.8622"
+       style="filter:url(#filter4861)" />
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3346"
+       xlink:href="#rect3346"
+       transform="matrix(0.99985118,0,0,1.0225189,37.866917,55.110381)"
+       id="use3358"
+       width="316.44342"
+       height="65.091042"
+       style="fill:#7c7c7c;fill-opacity:1;stroke:#a7a7a7;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3346"
+       xlink:href="#rect3346"
+       transform="matrix(0.99985118,0,0,1.0225189,37.866917,65.822135)"
+       id="use3360"
+       width="316.44342"
+       height="65.091042"
+       style="fill:#7c7c7c;fill-opacity:1;stroke:#a7a7a7;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3346"
+       xlink:href="#rect3346"
+       transform="matrix(0.99985118,0,0,1.0225189,59.988677,44.398624)"
+       id="use3362"
+       width="316.44342"
+       height="65.091042"
+       style="fill:#ff0101;fill-opacity:1;stroke:#e84e4e;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3346"
+       xlink:href="#rect3346"
+       transform="matrix(0.99985118,0,0,1.0225189,59.988677,55.110381)"
+       id="use3364"
+       style="fill:#372828;fill-opacity:1;stroke:#1a1717;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       width="316.44342"
+       height="65.091042" />
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3346"
+       xlink:href="#rect3346"
+       transform="matrix(0.99985118,0,0,1.0225189,59.988677,65.822135)"
+       id="use3366"
+       width="316.44342"
+       height="65.091042"
+       style="fill:#7c7c7c;fill-opacity:1;stroke:#a7a7a7;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3346"
+       xlink:href="#rect3346"
+       transform="matrix(0.99985118,0,0,1.0225189,37.866917,33.686869)"
+       id="use3358-2"
+       width="316.44342"
+       height="65.091042"
+       style="fill:#7c7c7c;fill-opacity:1;stroke:#a7a7a7;stroke-width:0.2472502;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3346"
+       xlink:href="#rect3346"
+       transform="matrix(0.99985118,0,0,1.0225189,59.988677,33.686869)"
+       id="use3364-4"
+       style="fill:#372828;fill-opacity:1;stroke:#1a1717;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       width="316.44342"
+       height="65.091042" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4241"
+       y="161.11218"
+       x="76.785713"
+       style="font-size:45px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ff0101;fill-opacity:1;stroke:none;filter:url(#filter4505);font-family:sans-serif"
+       xml:space="preserve"><tspan
+         style="font-size:45px;font-style:normal;font-variant:normal;font-weight:600;font-stretch:condensed;fill:#ff0101;fill-opacity:1;font-family:Verdana Pro;-inkscape-font-specification:Verdana Pro Semi-Bold Condensed"
+         y="161.11218"
+         x="76.785713"
+         id="tspan4243"
+         sodipodi:role="line">diff</tspan></text>
+    <use
+       x="0"
+       y="0"
+       inkscape:tiled-clone-of="#rect3346"
+       xlink:href="#rect3346"
+       transform="matrix(0.99985118,0,0,1.0225189,37.866917,22.975115)"
+       id="use3364-4-6"
+       style="fill:#372828;fill-opacity:1;stroke:#1a1717;stroke-width:0.2472502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       width="316.44342"
+       height="65.091042" />
+  </g>
+</svg>
