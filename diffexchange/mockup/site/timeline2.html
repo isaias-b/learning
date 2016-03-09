@@ -29,20 +29,27 @@
 
 <script>
 
+function bgColor(d){
+  return d.bgColor;
+}
+
 var data = [
-  {time: '1977-04-25', text: 'Episode: 4 - A New Hope'},
-  {time: '1980-04-17', text: 'Episode: 5 - The Empire Strikes Back'},
-  {time: '1984-04-25', text: 'Episode: 6 - Return of the Jedi'},
-  {time: '1999-04-19', text: 'Episode: 1 - The Phantom Menace'},
-  {time: '2002-04-16', text: 'Episode: 2 - Attack of the Clones'},
-  {time: '2005-04-19', text: 'Episode: 3 - Revenge of the Sith'},
-  {time: '2015-11-18', text: 'Episode: 7 - The Force Awakens'},
+  {time: '1977-04-25', bgColor: '#c22', text: 'Episode: 4 - A New Hope'},
+  {time: '1980-04-17', bgColor: '#c22', text: 'Episode: 5 - The Empire Strikes Back'},
+  {time: '1984-04-25', bgColor: '#c22', text: 'Episode: 6 - Return of the Jedi'},
+  {time: '1999-04-19', bgColor: '#2c2', text: 'Episode: 1 - The Phantom Menace'},
+  {time: '2002-04-16', bgColor: '#2c2', text: 'Episode: 2 - Attack of the Clones'},
+  {time: '2005-04-19', bgColor: '#2c2', text: 'Episode: 3 - Revenge of the Sith'},
+  {time: '2015-11-18', bgColor: '#22c', text: 'Episode: 7 - The Force Awakens'},
 ];
 
 var chart = new d3KitTimeline('#timeline1', {
   direction: 'right',
   initialWidth: 400,
   initialHeight: 250,
+  dotColor:     bgColor,
+  labelBgColor: bgColor,
+  linkColor:    bgColor,
   timeFn: function (e) {
     return new Date(e.time);
   }
