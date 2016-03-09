@@ -30,21 +30,21 @@
 <script>
 
 var data = [
-  {time: new Date(1977, 4,25), episode: 4, name: 'A New Hope'},
-  {time: new Date(1980, 4,17), episode: 5, name: 'The Empire Strikes Back'},
-  {time: new Date(1984, 4,25), episode: 6, name: 'Return of the Jedi'},
-  {time: new Date(1999, 4,19), episode: 1, name: 'The Phantom Menace'},
-  {time: new Date(2002, 4,16), episode: 2, name: 'Attack of the Clones'},
-  {time: new Date(2005, 4,19), episode: 3, name: 'Revenge of the Sith'},
-  {time: new Date(2015,11,18), episode: 7, name: 'The Force Awakens'},
+  {time: '1977-04-25', text: 'Episode: 4 - A New Hope'},
+  {time: '1980-04-17', text: 'Episode: 5 - The Empire Strikes Back'},
+  {time: '1984-04-25', text: 'Episode: 6 - Return of the Jedi'},
+  {time: '1999-04-19', text: 'Episode: 1 - The Phantom Menace'},
+  {time: '2002-04-16', text: 'Episode: 2 - Attack of the Clones'},
+  {time: '2005-04-19', text: 'Episode: 3 - Revenge of the Sith'},
+  {time: '2015-11-18', text: 'Episode: 7 - The Force Awakens'},
 ];
 
 var chart = new d3KitTimeline('#timeline1', {
   direction: 'right',
   initialWidth: 400,
   initialHeight: 250,
-  textFn: function(d){
-    return d.time.getFullYear() + ' - ' + d.name;
+  timeFn: function (e) {
+    return new Date(e.time);
   }
 });
 
