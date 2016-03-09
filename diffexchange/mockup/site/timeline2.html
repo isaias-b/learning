@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+
+    .axis text {
+    font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+    }
+
+  </style>
+  <script src="../bower_components/d3/d3.min.js"></script>
+  <script src="../bower_components/d3kit/dist/d3kit.min.js"></script>
+  <script src="../bower_components/labella/dist/labella.min.js"></script>
+  <script src="../bower_components/d3kit-timeline/dist/d3kit-timeline.min.js"></script>
+</head>
+
+<body>
+
+<div id="timeline1"></div>
+
+<script>
+
+var data = [
+  {time: new Date(1977, 4,25), episode: 4, name: 'A New Hope'},
+  {time: new Date(1980, 4,17), episode: 5, name: 'The Empire Strikes Back'},
+  {time: new Date(1984, 4,25), episode: 6, name: 'Return of the Jedi'},
+  {time: new Date(1999, 4,19), episode: 1, name: 'The Phantom Menace'},
+  {time: new Date(2002, 4,16), episode: 2, name: 'Attack of the Clones'},
+  {time: new Date(2005, 4,19), episode: 3, name: 'Revenge of the Sith'},
+  {time: new Date(2015,11,18), episode: 7, name: 'The Force Awakens'},
+];
+
+var chart = new d3KitTimeline('#timeline1', {
+  direction: 'right',
+  initialWidth: 400,
+  initialHeight: 250,
+  textFn: function(d){
+    return d.time.getFullYear() + ' - ' + d.name;
+  }
+});
+
+chart.data(data).resizeToFit();
+
+</script>
+</body>
+</html>
